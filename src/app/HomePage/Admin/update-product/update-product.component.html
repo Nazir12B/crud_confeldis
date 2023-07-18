@@ -1,0 +1,20 @@
+<h2 align="center" class="mt-4"> Mise à du Produit : {{product.name}} </h2>
+
+<form  class="m-4" (ngSubmit)="updateProduct()">
+  <div class="form-group">
+    <label for="productname">Nom du produit</label>
+    <input [(ngModel)]="product.name" name="name" type="text" class="form-control  mb-4" id="productname"  placeholder="Enter le nouveau nom du produit">
+  </div>
+
+  <div class="form-group">
+    <label for="productprice">Prix du produit</label>
+    <input [(ngModel)]="product.price" name="price" type="number" class="form-control mb-4" id="productprice"  placeholder="Enter e nouveau prix du produit">
+  </div>
+
+  <div class="form-group">
+    <label for="productquantity">Quantite du produit</label>
+    <input [(ngModel)]="product.quantity" name="quantity" type="number" class="form-control" id="productquantity"  placeholder="Enter la nouvelle quantité du produit" >
+  </div>
+
+  <button type="submit" class="btn btn-dark mt-4 mt-4">Submit</button>
+</form>

@@ -1,0 +1,18 @@
+<h2 align="center" class="mt-4"> Administration Page </h2>
+<div class="mb-2 d-flex justify-content-end">
+<a style="border-radius: 0px !important;" class="btn btn-dark" (click)="creatProduct()" >+ Nouveau produit</a>
+
+</div>
+<table align="center" border="1" class="mx-auto text-center table table-bordered ">
+  <tr><th>ID</th><th>Nom</th><th>Quantité</th><th>Prix</th><th>Action</th></tr>
+  <tr *ngFor="let product of products">
+    <td>{{product.id}}</td>
+    <td>{{product.name}}</td>
+    <td>{{product.quantity}}</td>
+    <td>{{product.price}}</td>
+    <td>
+      <img (click)="gotoUpdateProduct(product.id)" src="../assets/edit-2.svg"/>
+      <img (click)="confirmBox(product)" src="../assets/trash-2.svg"/>
+    </td>
+
+</table>

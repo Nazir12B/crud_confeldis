@@ -1,0 +1,13 @@
+<div>
+  <h3>'Warning! You have attempted to delete "{{dialogBelonging.customData.title}}"</h3>
+  <p class="text-center my-4">
+    Entrez le nom du produit dans le champs en dessous et cliquer sur le boutton Ok pour continuer ou sur Annuler pour annuler l'opération.
+  </p>
+  <span *ngIf="message!=''" [ngClass]="{'text-danger': hasError, 'text-primary': !hasError}">
+    {{message}}
+  </span>
+  <input [(ngModel)]="name" name="name" type="text" class="form-control" id="productname"  placeholder="Enter name">
+
+
+
+</div>
